@@ -15,7 +15,7 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 263 70% 50.4%;
+    --primary: 197 71% 52%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 240 3.7% 15.9%;
@@ -32,16 +32,16 @@
 
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 263 70% 50.4%;
+    --ring: 197 71% 52%;
 
     --radius: 0.75rem;
 
-    /* Fantasy colors */
-    --fantasy-purple: 263 70% 50.4%;
-    --fantasy-pink: 320 85% 60%;
-    --fantasy-gold: 43 96% 56%;
-    --fantasy-blue: 217 91% 60%;
-    --fantasy-green: 142 76% 36%;
+    /* Medical colors */
+    --medical-blue: 197 71% 52%;
+    --medical-green: 142 76% 36%;
+    --medical-red: 0 84% 60%;
+    --medical-white: 0 0% 98%;
+    --medical-gray: 220 13% 91%;
   }
 }
 
@@ -51,7 +51,7 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-foreground;
+    @apply bg-gradient-to-br from-blue-900 via-slate-800 to-cyan-900 text-foreground;
     font-family: "Open Sans", sans-serif;
   }
 
@@ -66,15 +66,15 @@
 }
 
 @layer components {
-  .fantasy-card {
-    @apply bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm border border-purple-400/30 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25;
+  .medical-card {
+    @apply bg-gradient-to-br from-blue-800/50 to-cyan-800/50 backdrop-blur-sm border border-blue-400/30 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25;
   }
 
-  .fantasy-button {
-    @apply bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  .medical-button {
+    @apply bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg;
   }
 
-  .magical-glow {
-    @apply shadow-lg shadow-purple-500/25 border border-purple-400/30;
+  .hospital-glow {
+    @apply shadow-lg shadow-blue-500/25 border border-blue-400/30;
   }
 }

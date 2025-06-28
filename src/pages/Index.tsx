@@ -1,15 +1,15 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import PhobiaShowcase from "@/components/PhobiaShowcase";
-import GameFeatures from "@/components/GameFeatures";
+import PatientShowcase from "@/components/PatientShowcase";
+import MedicalFeatures from "@/components/GameFeatures";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <HeroSection />
-      <PhobiaShowcase />
-      <GameFeatures />
+      <PatientShowcase />
+      <MedicalFeatures />
     </div>
   );
 };

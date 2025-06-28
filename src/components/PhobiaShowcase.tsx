@@ -1,46 +1,46 @@
-import PhobiaCard from "./PhobiaCard";
+import PatientCard from "./PatientCard";
 
-const PhobiaShowcase = () => {
-  const sampleCards = [
+const PatientShowcase = () => {
+  const samplePatients = [
     {
-      name: "Паучок-Обнимашка",
-      type: "дружелюбный",
-      power: 3,
-      health: 5,
-      description:
-        "Этот милый паучок просто хочет дружить! Его объятия дают дополнительную защиту союзникам.",
-      emoji: "🕷️",
-      rarity: "common" as const,
+      name: "Анна Петрова",
+      condition: "грипп",
+      severity: 3,
+      recovery: 7,
+      symptoms:
+        "Повышенная температура, кашель и общая слабость. Требует симптоматического лечения.",
+      emoji: "🤒",
+      priority: "routine" as const,
     },
     {
-      name: "Призрак-Шутник",
-      type: "весёлый",
-      power: 4,
-      health: 3,
-      description:
-        "Любит подшучивать, но никого не пугает! Может стать невидимым на один ход.",
-      emoji: "👻",
-      rarity: "rare" as const,
+      name: "Михаил Сидоров",
+      condition: "перелом",
+      severity: 6,
+      recovery: 4,
+      symptoms:
+        "Закрытый перелом левой руки после падения. Необходима срочная иммобилизация.",
+      emoji: "🩹",
+      priority: "urgent" as const,
     },
     {
-      name: "Змейка-Танцор",
-      type: "артистичный",
-      power: 5,
-      health: 4,
-      description:
-        "Грациозная змейка, которая завораживает врагов своим танцем и лечит союзников.",
-      emoji: "🐍",
-      rarity: "epic" as const,
+      name: "Елена Кузнецова",
+      condition: "аппендицит",
+      severity: 8,
+      recovery: 6,
+      symptoms:
+        "Острые боли в правом боку, тошнота и рвота. Подозрение на острый аппендицит.",
+      emoji: "🏥",
+      priority: "critical" as const,
     },
     {
-      name: "Королева Темноты",
-      type: "мудрая",
-      power: 8,
-      health: 7,
-      description:
-        "Мудрая правительница, которая защищает всех от настоящих страхов и дарит храбрость.",
-      emoji: "🌙",
-      rarity: "legendary" as const,
+      name: "Дмитрий Волков",
+      condition: "инфаркт",
+      severity: 10,
+      recovery: 3,
+      symptoms:
+        "Острая боль в груди, одышка и потливость. Требует немедленной госпитализации!",
+      emoji: "🚨",
+      priority: "emergency" as const,
     },
   ];
 
@@ -48,24 +48,24 @@ const PhobiaShowcase = () => {
     <section className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent">
-            Познакомься с Фобиями
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
+            Твои Пациенты
           </h2>
-          <p className="text-xl text-purple-200 max-w-2xl mx-auto">
-            Каждое существо в нашем мире — это добрая душа, которая поможет тебе
-            стать храбрее! 💫
+          <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+            Каждый пациент нуждается в твоей помощи. Поставь диагноз и назначь
+            правильное лечение! 🩺
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {sampleCards.map((card, index) => (
-            <PhobiaCard key={index} {...card} />
+          {samplePatients.map((patient, index) => (
+            <PatientCard key={index} {...patient} />
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <button className="fantasy-button text-lg px-8 py-4">
-            Собрать свою колоду
+          <button className="medical-button text-lg px-8 py-4">
+            Принять пациентов
           </button>
         </div>
       </div>
@@ -73,4 +73,4 @@ const PhobiaShowcase = () => {
   );
 };
 
-export default PhobiaShowcase;
+export default PatientShowcase;
